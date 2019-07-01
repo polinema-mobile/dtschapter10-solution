@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".ui.MainActivity">
+    <!--Todo 13 textview-->
+    <TextView
+        android:id="@+id/tvBmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BMI List"
+        android:background="@android:color/holo_blue_bright"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="15sp"/>
+    <!--Todo 14 add recylerview-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_bmi"
+        app:layout_constraintTop_toBottomOf="@+id/tvBmi"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_bmi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </androidx.recyclerview.widget.RecyclerView>
+    <Button
+        android:id="@+id/btn_add_bmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add BMI"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
