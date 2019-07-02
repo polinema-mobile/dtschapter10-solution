@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new BmiAdapter(this);
 
         bmiViewModel = ViewModelProviders.of(this).get(BmiViewModel.class);
+        recyclerView.setAdapter(adapter);
         bmiViewModel.getAllBmi().observe(this, new Observer<List<BmiEntity>>() {
 
             @Override
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, REQUEST_CODE);
             }
         });
+
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
             BmiEntity bmiEntity = new BmiEntity();
+            bmiEntity.setBmiResult(Float.valueOf(data.getStringExtra(NewBmiActivity.EXTRA_REPLY)));
             bmiViewModel.insertBmi(bmiEntity);
         } else {
             Toast.makeText(

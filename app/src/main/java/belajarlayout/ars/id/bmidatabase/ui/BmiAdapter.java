@@ -50,7 +50,7 @@ public class BmiAdapter extends RecyclerView.Adapter<BmiAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            bmiItemView = itemView.findViewById(R.id.tvBmi);
+            bmiItemView = itemView.findViewById(R.id.tvBmiResult);
         }
     }
 }

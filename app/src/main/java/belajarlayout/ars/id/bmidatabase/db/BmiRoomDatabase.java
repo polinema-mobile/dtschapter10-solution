@@ -25,7 +25,8 @@ public abstract class BmiRoomDatabase extends RoomDatabase {
             synchronized (BmiRoomDatabase.class){
                 if (Instance == null){
                     Instance = Room.databaseBuilder(context.getApplicationContext(),
-                                BmiRoomDatabase.class, Database_Name).build();
+                            BmiRoomDatabase.class, Database_Name)
+                            .build();
                 }
             }
         }
@@ -56,6 +57,9 @@ public abstract class BmiRoomDatabase extends RoomDatabase {
         protected Void doInBackground(final Void... params) {
             mDao.deleteAllBmi();
             BmiEntity bmi = new BmiEntity();
+            bmi.setBmiResult(10);
+            bmi.setBeratBadan(100);
+            bmi.setTinggiBadan(180);
             mDao.insert(bmi);
             return null;
         }
