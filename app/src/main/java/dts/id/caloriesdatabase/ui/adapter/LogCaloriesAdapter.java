@@ -49,11 +49,10 @@ public class LogCaloriesAdapter extends RecyclerView.Adapter<LogCaloriesAdapter.
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView tvWaktuMakan, tvTotalCalories, tvFoodName, tvCalory;
+        TextView tvWaktuMakan, tvFoodName, tvCalory;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tvWaktuMakan = itemView.findViewById(R.id.tvWaktuMakan);
-            tvTotalCalories = itemView.findViewById(R.id.tvTotalCalories);
             tvFoodName = itemView.findViewById(R.id.tvFoodName);
             tvCalory= itemView.findViewById(R.id.tvCalory);
         }

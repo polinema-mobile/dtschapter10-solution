@@ -11,6 +11,7 @@ import dts.id.caloriesdatabase.db.entity.LogCaloriesEntity;
 
 @Database(entities = {LogCaloriesEntity.class}, version = 1)
 public abstract class CaloriesRoomDatabase extends RoomDatabase {
+    //Todo 3
     private  static  CaloriesRoomDatabase Instance;
     private static final String DATABASE_NAME = "CaloriesDatabase";
 
@@ -26,6 +27,5 @@ public abstract class CaloriesRoomDatabase extends RoomDatabase {
         }
         return Instance;
     }
-
 
 }

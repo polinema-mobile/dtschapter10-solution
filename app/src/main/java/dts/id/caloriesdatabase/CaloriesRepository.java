@@ -14,7 +14,7 @@ import dts.id.caloriesdatabase.db.dao.LogCaloriesDao;
 import dts.id.caloriesdatabase.db.entity.LogCaloriesEntity;
 
 public class CaloriesRepository {
-
+    //Todo 4
     private CaloriesRoomDatabase caloriesRoomDatabase;
     private  static  LogCaloriesDao logCaloriesDao;
 

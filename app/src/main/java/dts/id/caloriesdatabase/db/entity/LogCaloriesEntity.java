@@ -8,6 +8,8 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "log_calories")
 public class LogCaloriesEntity {
+    //Todo 1 Membuat entity
+
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int id;
