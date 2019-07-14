@@ -70,11 +70,8 @@ public class LogCaloriesFragment extends Fragment {
                         .commit();
             }
         });
-    }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+
         adapterLogCalories = new LogCaloriesAdapter(getActivity());
         mRecyclerCalories.setAdapter(adapterLogCalories);
 
@@ -85,6 +82,12 @@ public class LogCaloriesFragment extends Fragment {
                 adapterLogCalories.SetListLogCalories(logCaloriesEntities);
             }
         });
+
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
     }
 
 }

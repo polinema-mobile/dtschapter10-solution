@@ -25,6 +25,7 @@ public class LogCaloriesAdapter extends RecyclerView.Adapter<LogCaloriesAdapter.
 
     public void SetListLogCalories(List<LogCaloriesEntity> logCaloriesEntities){
         mLogCaloriesEntities = logCaloriesEntities;
+        notifyDataSetChanged();
     }
 
     @NonNull
